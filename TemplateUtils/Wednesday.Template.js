@@ -25,19 +25,19 @@
 
 
 	/**
-	 * Localise globals and dependencies
-	 * @type { Var }
-	 */
-	var Handlebars = window.Handlebars || undefined;
-
-
-	/**
 	 * Wednesday Namespace
 	 * @type { Object }
 	 */
 	var Wednesday = window.Wednesday = window.Wednesday || {};
 	Wednesday.Template = Wednesday.Template || {};
 	Wednesday.JST = Wednesday.JST || {};
+
+
+	/**
+	 * Localise globals and dependencies
+	 * @type { Var }
+	 */
+	var Handlebars = window.Handlebars || undefined;
 
 
 	/**
