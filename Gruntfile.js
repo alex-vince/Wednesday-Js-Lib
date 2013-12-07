@@ -3,6 +3,13 @@ module.exports = function( grunt )
 
 	'use strict';
 
+	var FILE_ARR = 
+	[
+		'TemplateUtils/Wednesday.Template.js'
+	];
+
+	var DOC_DIR = 'Documentation';
+
 	/**
 	 * Tasks Config
 	 * @type { Object }
@@ -10,22 +17,29 @@ module.exports = function( grunt )
 	grunt.initConfig(
 		{
 
+
+			clean : 
+			{
+				dist : 
+				[
+					DOC_DIR
+				]
+			},
+
+
 			jshint: 
 			{
 				options: 
 				{
 					jshintrc: '.jshintrc'
 				},
-				all: 
-				[
-					'TemplateUtils/Template.js'
-				]
+				all: FILE_ARR
 			},
 
 
 			jsdoc : {
 				dist : {
-					src: ['TemplateUtils/Template.js'], 
+					src: FILE_ARR, 
 					options: {
 						destination: 'Documentation'
 					}
@@ -41,10 +55,7 @@ module.exports = function( grunt )
 				},
 				libs : 
 				{
-					files: 
-					[ 
-						'TemplateUtils/Template.js' 
-					],
+					files: FILE_ARR,
 					tasks : [ 'jshint:all' ]
 				}
 			}
@@ -64,6 +75,7 @@ module.exports = function( grunt )
 	/**
 	 * Load Tasks
 	 */
+	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-jsdoc' );
 
@@ -73,7 +85,7 @@ module.exports = function( grunt )
   /**
    * Register Tasks
    */
-	grunt.registerTask( 'javascript', [ 'jshint', 'jsdoc' ] );
+	grunt.registerTask( 'javascript', [ 'clean', 'jshint', 'jsdoc' ] );
 	grunt.registerTask( 'default', [ 'javascript', 'watch' ] );
 
 
