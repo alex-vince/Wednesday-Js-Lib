@@ -95,7 +95,7 @@
 
 
 	/**
-	 * fetch a template to be published
+	 * fetch a template to be rendered
 	 * @param  { String } template ID
 	 * @param  { Object } data to be passed to template
 	 * @return { String } HTML to be rendered
