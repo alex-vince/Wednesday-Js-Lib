@@ -6,22 +6,53 @@
         <title>Template Utils</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.dev.js"></script>
 
-        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-
-        
     </head>
     <body>
         
         <div></diiv>
 
+        <script src="JST.js"></script>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
         <script src="Template.js"></script>
 
-        <script id="template" type="text/handlebars">
+        <script id="template" type="text/x-handlebars-template">
 
+            <h1>This is a {{ id }} Template</h1>
+
+        </script>
+
+        <script>
+
+            $( function() {
+
+                //Script Tag Example
+                Wednesday.Template.append( 
+                    $( 'div' ), 
+                    'template', 
+                    { id : 'Script Tag' }, 
+                    function()
+                    {
+                        //console.log( 'Callback Fired' );
+                    } 
+                );
+
+                //JST Example
+                Wednesday.Template.append(
+                    $( 'div' ),
+                    'example/jst.html',
+                    { id  : 'JST'},
+                    function()
+                    {
+
+                    }
+                );
+     
+            } );
 
         </script>
        
