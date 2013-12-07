@@ -1,0 +1,27 @@
+{
+  "name": "ProjectBoilerplate",
+  "description": "Wednesday Agency Common JS Libs",
+  "version": "0.1.2",
+  "homepage": "",
+  "author": {
+    "name": "Wednesday",
+    "url": "http://wednesdayagency.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alex-wednesday/Wednesday-Js-Lib.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-jsdoc": "~0.4.2"
+  },
+  "keywords": []
+}
