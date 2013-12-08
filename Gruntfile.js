@@ -5,7 +5,8 @@ module.exports = function( grunt )
 
 	var FILE_ARR = 
 	[
-		'TemplateUtils/Wednesday.Template.js'
+		'Default/Default.js',
+		'TemplateUtils/Wednesday.Util.Template.js'
 	];
 
 	var DOC_DIR = 'Documentation';
@@ -37,11 +38,14 @@ module.exports = function( grunt )
 			},
 
 
-			jsdoc : {
-				dist : {
+			jsdoc : 
+			{
+				dist : 
+				{
 					src: FILE_ARR, 
-					options: {
-						destination: 'Documentation'
+					options: 
+					{
+						destination: DOC_DIR
 					}
 				}
 			},
