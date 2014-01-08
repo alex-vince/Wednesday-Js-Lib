@@ -1,5 +1,6 @@
 /lib
 *.sublime-*
+.idea
 .project
 .DS_Store
 .sass-cache

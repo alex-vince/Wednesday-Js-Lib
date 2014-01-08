@@ -48,7 +48,6 @@
 	 * @param  { String } template ID
 	 * @param  { Object } data to be passed to template
 	 * @param  { Function } callback
-	 * @return { Function } callback
 	 */
 	Wednesday.Util.Template.publish = function( $container, template, data, callback )
 	{
@@ -67,7 +66,6 @@
 	 * @param  { String } template ID
 	 * @param  { Object } data to be passed to template
 	 * @param  { Function } callback
-	 * @return { Function } callback
 	 */
 	Wednesday.Util.Template.append = function( $container, template, data, callback )
 	{
@@ -75,7 +73,7 @@
 		var html = Wednesday.Util.Template.fetch( template, data );
 		$container.append( html );
 
-		return Wednesday.Util.Template.callback( callback );
+		Wednesday.Util.Template.callback( callback );
 
 	};
 
@@ -86,7 +84,6 @@
 	 * @param  { String } template ID
 	 * @param  { Object } data to be passed to template
 	 * @param  { Function } callback
-	 * @return { Function } callback
 	 */
 	Wednesday.Util.Template.prepend = function( $container, template, data, callback )
 	{
@@ -94,7 +91,7 @@
 		var html = Wednesday.Util.Template.fetch( template, data );
 		$container.prepend( html );
 
-		return Wednesday.Util.Template.callback( callback );
+		Wednesday.Util.Template.callback( callback );
 
 	};
 
@@ -123,7 +120,7 @@
 			source = $( '#' + template ).html();
 
 		}
-	
+
 		//Else Ajax
 
 		html = Wednesday.Util.Template.compile( source, data );
@@ -137,7 +134,7 @@
 	 * compile a template 
 	 * @param  { String } source HTML to compile
 	 * @param  { Object } data to be passed to template
-	 * @return { String } html to be rendered
+	 * @return { String } HTML to be rendered
 	 */
 	Wednesday.Util.Template.compile = function( source, data )
 	{

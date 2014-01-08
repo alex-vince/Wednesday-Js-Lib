@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>History Utils</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.dev.js"></script>
+
+    </head>
+    <body>
+        
+        <a href="/History/newpage.html">Push State</a>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="../EventEmitter/Wednesday.Util.EventEmitter.js"></script>
+        <script src="../URI/Wednesday.Util.Uri.js"></script>
+        <script src="Wednesday.Util.History.js"></script>
+
+
+        <script>
+
+            $( window ).ready( function()
+            {
+
+                /**
+                 * Example Use
+                 */
+                Wednesday.Util.History.init();
+
+
+                $( 'body' ).on( 'Page/Back', function( e, params ) 
+                {
+
+                    console.log( 'Back', params );
+
+                } );
+
+                $( 'body' ).on( 'Page/Forward', function( e, params ) 
+                {
+
+                    console.log( 'Forward', params );
+
+                } );
+                
+            
+                $( 'body' ).on( 'click', 'a', function( e )
+                {                    
+                    e.preventDefault();
+
+
+                    Wednesday.Util.History.push( 
+                        'History Utils - New Page', 
+                        $( this ).attr( 'href' ), 
+                        { 
+                            firstName : 'Alex', 
+                            lastName: 'Vince'  
+                        }
+                    );
+
+                } );
+
+            } );
+
+        </script>
+       
+    </body>
+</html>

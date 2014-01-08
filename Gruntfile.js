@@ -3,9 +3,15 @@ module.exports = function( grunt )
 
 	'use strict';
 
+	var PORT 					= 4000,
+			RELOAD_PORT 	= 35729;
+
 	var FILE_ARR = 
 	[
 		'Default/Default.js',
+		'URI/Wednesday.Util.Uri.js',
+		'EventEmitter/Wednesday.Util.EventEmitter.js',
+		'History/Wednesday.Util.History.js',
 		'TemplateUtils/Wednesday.Util.Template.js'
 	];
 
@@ -49,6 +55,24 @@ module.exports = function( grunt )
 					}
 				}
 			},
+
+
+			/**
+			 * Launch the libs dir via connect middleware
+			 * @type { Object }
+			 */
+			connect : 
+			{
+				server :
+				{
+					options:
+					{
+						hostname : '*',
+						port : PORT
+						
+					}
+				}
+			},
     
 
 			watch: 
@@ -83,6 +107,7 @@ module.exports = function( grunt )
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-jsdoc' );
 
+	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
 
@@ -90,7 +115,7 @@ module.exports = function( grunt )
    * Register Tasks
    */
 	grunt.registerTask( 'javascript', [ 'clean', 'jshint', 'jsdoc' ] );
-	grunt.registerTask( 'default', [ 'javascript', 'watch' ] );
+	grunt.registerTask( 'default', [ 'javascript', 'connect', 'watch' ] );
 
 
 };
