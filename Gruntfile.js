@@ -12,7 +12,8 @@ module.exports = function( grunt )
 		'URI/Wednesday.Util.Uri.js',
 		'EventEmitter/Wednesday.Util.EventEmitter.js',
 		'History/Wednesday.Util.History.js',
-		'TemplateUtils/Wednesday.Util.Template.js'
+		'TemplateUtils/Wednesday.Util.Template.js',
+		'QueryString/Wednesday.Util.QueryString.js'
 	];
 
 	var DOC_DIR = 'Documentation';

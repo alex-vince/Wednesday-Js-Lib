@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>History Utils</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.dev.js"></script>
+
+    </head>
+    <body>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+        <script src="Wednesday.Util.QueryString.js"></script>
+
+
+        <script>
+
+            var obj =
+            {
+                section : 5,
+                ids : '[1,2,3,4,5]',
+                len : 10
+            };
+
+            var make = Wednesday.Util.QueryString.make( obj );
+            console.log( make );
+
+            var get = Wednesday.Util.QueryString.get();
+            console.log( get );
+
+        </script>
+       
+    </body>
+</html>
