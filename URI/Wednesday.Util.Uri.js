@@ -18,6 +18,7 @@
 ( function( $, window, undefined )
 {
 
+
 	/**
 	 * Set ECMA5 strict mode
 	 */
@@ -40,6 +41,10 @@
 	hashBangPrefix  = '!';
 
 
+	/**
+	 * get current uri
+	 * @return { String } uri
+	 */
 	Wednesday.Util.Uri.getUri = function()
 	{
 
@@ -51,6 +56,11 @@
 	};
 
 
+	/**
+	 * get segment or uri
+	 * @param  { Integer } segment index
+	 * @return { String } uri segment
+	 */
 	Wednesday.Util.Uri.getUriSegment = function( segment )
 	{
 
@@ -62,6 +72,10 @@
 	};
 
 
+	/**
+	 * get uri components as an array
+	 * @return { Array } array of uri components
+	 */
 	Wednesday.Util.Uri.getUriArray = function()
 	{
 
@@ -85,6 +99,10 @@
 	};
 
 
+	/**
+	 * Get browser uri based on support of HTML5 History
+	 * @return { String } uri
+	 */
 	Wednesday.Util.Uri.getUriByType = function()
 	{
 
@@ -108,6 +126,10 @@
 	};
 
 
+	/**
+	 * get pathname from location object
+	 * @return { String } pathname
+	 */
 	Wednesday.Util.Uri.getPathName = function()
 	{
 
@@ -115,7 +137,10 @@
 
 	};
 
-
+	/**
+	 * get pathname from hashbang uri
+	 * @return { String } pathname
+	 */
 	Wednesday.Util.Uri.getHashBangPathName = function()
 	{
 

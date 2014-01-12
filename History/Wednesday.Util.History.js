@@ -8,6 +8,9 @@
  *
  * @dependencies Modernizr, jQuery ( $ ), Wednesday.Util.EventEmitter
  *
+ *
+ * THIS NEEDS TO BE RE-WRITTEN AS A FUNCTION CONSTRUCTOR
+ * 
  * 
  * Module Sandbox
  * @param  { jQuery } $ Library
