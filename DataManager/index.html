@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>jQuery DataManager</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+       <script src="jQuery.DataManager.js"></script>
+    
+
+      <script>
+          
+
+        $(function() {
+                         
+          var callback =  {};
+
+          callback.onData = function( id, data )
+          {
+
+            console.log( id );
+            console.log( data );
+
+          }
+
+          callback.onError = function( id, err )
+          {
+
+            // console.log( id );
+            // console.log( err );
+
+          }
+
+          var dm = $.DataManager;
+          // dm.addFeed( 'alex', 'test.json', [ callback ], 1000 );
+          // dm.start( 'alex' );
+          dm.addFeed( 'alex', 'test.json', [ callback ] ).start( 'alex' );
+         
+
+        });
+
+       </script>
+    </body>
+</html>
