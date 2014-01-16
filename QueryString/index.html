@@ -35,10 +35,10 @@
             };
 
             var make = Wednesday.Util.QueryString.make( obj );
-            console.log( make );
+            //console.log( make );
 
             var get = Wednesday.Util.QueryString.get();
-            console.log( get );
+            //console.log( get );
 
 
             //Tests
@@ -57,6 +57,94 @@
                 } );
 
             } );
+
+        </script>
+
+
+        <script>
+
+
+            // var extend = function( object )
+            // {
+
+            //   var proto =  _.extend( {}, object, {
+
+
+            //     dataManager : function()
+            //     {
+
+
+            //     }
+
+            //   } );
+
+            //   var func = function()
+            //   {
+
+            //     this.initialise.apply( this, arguments );
+
+            //   };
+
+            //   func.prototype = proto;
+            //   return func;
+  
+            // }
+
+
+            // var ding = extend(
+
+            //     {
+
+            //         attributes : {
+
+            //         },
+
+
+            //         initialise : function( name )
+            //         {
+
+            //             console.log('Init Do Daa');
+            //             console.log( name );
+            //         }
+            //     }
+            // );
+
+            // //console.log( ding );
+            // var ins = new ding( 'ALEX VINCE' );
+            // 
+            var Model = function( object )
+            {
+
+                var proto = _.extend( {}, object, {
+
+
+
+                } );
+                
+                var mdl = function()
+                {
+                    this.init.apply(this, arguments);
+                }
+
+                mdl.prototype = proto;
+                return mdl;
+            }
+    
+
+            var ding = Model( { 
+
+                init : function( name )
+                {
+
+                    console.log( this );
+                    console.log( name );
+
+                }
+
+            } );
+
+
+            var ins = new ding( 'ALEX VINCE' );
 
         </script>
        

@@ -121,8 +121,6 @@
 
 		}
 
-		//Else Ajax
-
 		html = Wednesday.Util.Template.compile( source, data );
 
 		return html;
