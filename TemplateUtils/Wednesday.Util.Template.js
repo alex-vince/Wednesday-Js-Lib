@@ -32,7 +32,7 @@
 	Wednesday.Util = Wednesday.Util || {};
 	Wednesday.Util.Template = Wednesday.Util.Template || {};
 	
-	Wednesday.JST = Wednesday.JST || {};
+	var JST = JST || {};
 
 
 	/**
@@ -108,10 +108,10 @@
 		var source,
 		html;
 
-		if ( Wednesday.JST[ template ] )
+		if ( JST[ template ] )
 		{
 
-			source = Wednesday.JST[ template ];
+			source = JST[ template ];
 
 		}
 		else if ( $( 'body' ).find( '#' + template ).length > 0 )
