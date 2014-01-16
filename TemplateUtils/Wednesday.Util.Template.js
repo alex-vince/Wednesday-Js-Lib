@@ -32,7 +32,7 @@
 	Wednesday.Util = Wednesday.Util || {};
 	Wednesday.Util.Template = Wednesday.Util.Template || {};
 	
-	var JST = JST || {};
+	var JST = window.JST || {};
 
 
 	/**
